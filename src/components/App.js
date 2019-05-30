@@ -48,6 +48,7 @@ class App extends React.Component {
     hasScrolled = false;
     onScroll = () => {
         const self = this;
+        if(self.state.searchTerm != ''){
         $(window).scroll(function() {   
             if(!hasScrolled && $(window).scrollTop() + $(window).height() == $(document).height()) {
                 // const response =
@@ -70,6 +71,7 @@ class App extends React.Component {
             }
             
          });
+        }
        }
 
     
