@@ -22,7 +22,7 @@ class App extends React.Component {
             }
         })
         this.setState({
-            videos: this.state.videos.concat(response.data.items),
+            videos: response.data.items,
             searchTerm: termFromSearchBar,
             nextToken: response.data.nextPageToken
         })
