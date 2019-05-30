@@ -1,0 +1,15 @@
+.video-item {
+    display: flex !important;
+    align-items: center !important;
+    cursor: pointer;
+}
+
+.video-item.item img {
+    width: 220px;
+    height: 150px ;
+}
+
+body {
+    background-color: whitesmoke;
+    font-family: 'Times New Roman', Times, serif;
+}
