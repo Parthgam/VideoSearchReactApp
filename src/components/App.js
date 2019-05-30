@@ -16,17 +16,22 @@ class App extends React.Component {
         nextToken: null
     }
     handleSubmit = async (termFromSearchBar) => {
-        const response = await youtube.get('/search', {
-            params: {
-                q: termFromSearchBar
-            }
-        })
         this.setState({
-            videos: response.data.items,
-            searchTerm: termFromSearchBar,
-            nextToken: response.data.nextPageToken
+            videos: []
         })
-        console.log(response.data.nextPageToken)
+        if(termFromSearchBar != ''){
+            const response = await youtube.get('/search', {
+                params: {
+                    q: termFromSearchBar
+                }
+            })
+            this.setState({
+                videos: response.data.items,
+                searchTerm: termFromSearchBar,
+                nextToken: response.data.nextPageToken
+            })
+        }
+        // console.log(response.data.nextPageToken)
     };
     handleVideoSelect = (video) => {
         this.setState({selectedVideo: video})
