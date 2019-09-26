@@ -1,6 +1,5 @@
-# Assignment
-React Assignment for Video Search
-Change the Youtube Api Key in the apis folder, youtube file.
+# React Video Search App
+React App for Video Search
 
 # Screenshots for the project are :
 
